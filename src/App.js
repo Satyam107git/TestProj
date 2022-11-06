@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { SpectrumVisualizer, SpectrumVisualizerTheme } from "react-audio-visualizers";
+import "./index.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div style={{height: '100vh'}}>
+    <SpectrumVisualizer
+    audio="https://cdn.discordapp.com/attachments/775740994595323954/775741544149549096/Andromedik_-_SHE_NCS_ReleaseMP3_160K.mp3"
+    theme={SpectrumVisualizerTheme.radialSquaredBars}
+    colors={["#009688", "#26a69a"]}
+    iconsColor="#26a69a"
+    backgroundColor="blue"
+    showMainActionIcon
+    showLoaderIcon
+    highFrequency={8000}
+      />
     </div>
   );
 }
